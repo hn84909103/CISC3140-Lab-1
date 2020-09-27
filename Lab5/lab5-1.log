@@ -1,0 +1,811 @@
+
+]0;syyang@sol28:~[?1034h[syyang@sol28 ~]$ cd CISC3140  
+]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ wget https://raw.githubusercontent.com/hn84909103/CISC3 140-Lab-1/master/villagers.csv
+--2020-09-23 15:26:25--  https://raw.githubusercontent.com/hn84909103/CISC3140-Lab-1/master/villagers.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 199.232.64.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|199.232.64.133|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 169024 (165K) [text/plain]
+Saving to: ?òvillagers.csv??
+
+ 0% [                                       ] 0           --.-K/s              100%[======================================>] 169,024     --.-K/s   in 0.04s   
+
+2020-09-23 15:26:30 (3.71 MB/s) - ?òvillagers.csv??saved [169024/169024]
+
+]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ wc -l villagers.csv
+392 villagers.csv
+]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ awk ''N'R' '='=' '1',' 'N'R' '='=' '5'{'}'P}'R}'I}'N}'T}'[1P}'[1P}'[1P}'[1P}'[1P}'p}'r}'i}'n}'t}'[C[Cvillagers villagers[C[C[C[C[C[C[C[C[C.csv
+Name,Species,Gender,Personality,Subtype,Hobby,Birthday,Catchphrase,Favorite Song,Favorite Saying,Style 1,Style 2,Color 1,Color 2,Default Clothing,Wallpaper,Flooring,Furniture List,Furniture Name List,Filename,Unique Entry ID
+Admiral,Bird,Male,Cranky,A,Nature,1/27,aye aye,Steep Hill,Only quitters give up.,Cool,Cool,Black,Blue,3164,dirt-clod wall,tatami,717;1849;7047;2736;787;5970;3449;3622;3802;4106;3438;4029,clay furnace;kotatsu;zen cushion;retro fan;tape deck;firewood;wooden stool;floor seat;pine bonsai tree;pendulum clock;wooden end table;rotary phone,brd06,B3RyfNEqwGmcccRC3
+Agent S,Squirrel,Female,Peppy,B,Fitness,7/2,sidekick,Go K.K. Rider,You gotta put the pedal to the metal!,Active,Simple,Blue,Black,12036,concrete wall,colorful tile flooring,7845;7150;3468;4080;290;3971;3449;1708;4756;2560;4753;7323;7789,pull-up-bar stand;blue corner;beach towel;long bathtub;treadmill;imperial partition;wooden stool;cassette player;throwback wall clock;wooden chest;throwback wrestling figure;brown wooden-deck rug;drying rack,squ05,SGMdki6dzpDZyXAw5
+Agnes,Pig,Female,Big Sister,A,Play,4/21,snuffle,K.K. House,You reap what you sow.,Simple,Elegant,Pink,White,4290,gray molded-panel wall,arabesque flooring,4129;7236;7235;7802;896;3428;4027;7325;3958;7136;3951;3773;7801,monstera;lily record player;rose bed;pet bed;cat tower;wall-mounted TV (50 in.);floral swag;ivory medium round mat;antique mini table;cat grass;antique console table;terrarium;pet food bowl,pig17,jzWCiDPm9MqtCfecP
+Al,Gorilla,Male,Lazy,B,Fitness,10/18,ayyyeee,Go K.K. Rider,Life is a buffet. Always go back for seconds.,Active,Active,Red,White,3244,concrete wall,green rubber flooring,1452;4078;4013;833;4116;3697;7845;3307;3946;3960;7800,weight bench;barbell;punching bag;upright locker;whiteboard;portable radio;pull-up-bar stand;digital scale;outdoor table;handy water cooler;protein shaker bottle,gor08,LBifxETQJGEaLhBjC
+
+]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ awk -F"","[C ''{'}'P}'R}'[1P}'[1P}'p}'r}'i}'n}'t}' }'$}'1}',}'$}'2}',}'$}'3}',}'$}'4}'[C[C villagers.csv
+Name Species Gender Personality
+Admiral Bird Male Cranky
+Agent S Squirrel Female Peppy
+Agnes Pig Female Big Sister
+Al Gorilla Male Lazy
+Alfonso Alligator Male Lazy
+Alice Koala Female Normal
+Alli Alligator Female Snooty
+Amelia Eagle Female Snooty
+Anabelle Anteater Female Peppy
+Anchovy Bird Male Lazy
+Angus Bull Male Cranky
+Anicotti Mouse Female Peppy
+Ankha Cat Female Snooty
+Annalisa Anteater Female Normal
+Annalise Horse Female Snooty
+Antonio Anteater Male Jock
+Apollo Eagle Male Cranky
+Apple Hamster Female Peppy
+Astrid Kangaroo Female Snooty
+Audie Wolf Female Peppy
+Aurora Penguin Female Normal
+Ava Chicken Female Normal
+Avery Eagle Male Cranky
+Axel Elephant Male Jock
+Baabara Sheep Female Snooty
+Bam Deer Male Jock
+Bangle Tiger Female Peppy
+Barold Cub Male Lazy
+Bea Dog Female Normal
+Beardo Bear Male Smug
+Beau Deer Male Lazy
+Becky Chicken Female Snooty
+Bella Mouse Female Peppy
+Benedict Chicken Male Lazy
+Benjamin Dog Male Lazy
+Bertha Hippo Female Normal
+Bettina Mouse Female Normal
+Bianca Tiger Female Peppy
+Biff Hippo Male Jock
+Big Top Elephant Male Lazy
+Bill Duck Male Jock
+Billy Goat Male Jock
+Biskit Dog Male Lazy
+Bitty Hippo Female Snooty
+Blaire Squirrel Female Snooty
+Blanche Ostrich Female Snooty
+Bluebear Cub Female Peppy
+Bob Cat Male Lazy
+Bonbon Rabbit Female Peppy
+Bones Dog Male Lazy
+Boomer Penguin Male Lazy
+Boone Gorilla Male Jock
+Boots Alligator Male Jock
+Boris Pig Male Cranky
+Boyd Gorilla Male Cranky
+Bree Mouse Female Snooty
+Broccolo Mouse Male Lazy
+Broffina Chicken Female Snooty
+Bruce Deer Male Cranky
+Bubbles Hippo Female Peppy
+Buck Horse Male Jock
+Bud Lion Male Jock
+Bunnie Rabbit Female Peppy
+Butch Dog Male Cranky
+Buzz Eagle Male Cranky
+Cally Squirrel Female Normal
+Camofrog Frog Male Cranky
+Canberra Koala Female Big Sister
+Candi Mouse Female Peppy
+Carmen Rabbit Female Peppy
+Caroline Squirrel Female Normal
+Carrie Kangaroo Female Normal
+Cashmere Sheep Female Snooty
+Celia Eagle Female Normal
+Cesar Gorilla Male Cranky
+Chadder Mouse Male Smug
+Charlise Bear Female Big Sister
+Cheri Cub Female Peppy
+Cherry Dog Female Big Sister
+Chester Cub Male Lazy
+Chevre Goat Female Normal
+Chief Wolf Male Cranky
+Chops Pig Male Smug
+Chow Bear Male Cranky
+Chrissy Rabbit Female Peppy
+Claude Rabbit Male Lazy
+Claudia Tiger Female Snooty
+Clay Hamster Male Lazy
+Cleo Horse Female Snooty
+Clyde Horse Male Lazy
+Coach Bull Male Jock
+Cobb Pig Male Jock
+Coco Rabbit Female Normal
+Cole Rabbit Male Lazy
+Colton Horse Male Smug
+Cookie Dog Female Peppy
+Cousteau Frog Male Jock
+Cranston Ostrich Male Lazy
+Croque Frog Male Cranky
+Cube Penguin Male Lazy
+Curlos Sheep Male Smug
+Curly Pig Male Jock
+Curt Bear Male Cranky
+Cyd Elephant Male Cranky
+Cyrano Anteater Male Cranky
+Daisy Dog Female Normal
+Deena Duck Female Normal
+Deirdre Deer Female Big Sister
+Del Alligator Male Cranky
+Deli Monkey Male Lazy
+Derwin Duck Male Lazy
+Diana Deer Female Snooty
+Diva Frog Female Big Sister
+Dizzy Elephant Male Lazy
+Dobie Wolf Male Cranky
+Doc Rabbit Male Lazy
+Dom Sheep Male Jock
+Dora Mouse Female Normal
+Dotty Rabbit Female Peppy
+Drago Alligator Male Lazy
+Drake Duck Male Lazy
+Drift Frog Male Jock
+Ed Horse Male Smug
+Egbert Chicken Male Lazy
+Elise Monkey Female Snooty
+Ellie Elephant Female Normal
+Elmer Horse Male Lazy
+Eloise Elephant Female Snooty
+Elvis Lion Male Cranky
+Erik Deer Male Lazy
+Eugene Koala Male Smug
+Eunice Sheep Female Normal
+Fang Wolf Male Cranky
+Fauna Deer Female Normal
+Felicity Cat Female Peppy
+Filbert Squirrel Male Lazy
+Flip Monkey Male Jock
+Flo Penguin Female Big Sister
+Flora Ostrich Female Peppy
+Flurry Hamster Female Normal
+Francine Rabbit Female Snooty
+Frank Eagle Male Cranky
+Freckles Duck Female Peppy
+Freya Wolf Female Snooty
+Friga Penguin Female Snooty
+Frita Sheep Female Big Sister
+Frobert Frog Male Jock
+Fuchsia Deer Female Big Sister
+Gabi Rabbit Female Peppy
+Gala Pig Female Normal
+Gaston Rabbit Male Cranky
+Gayle Alligator Female Normal
+Genji Rabbit Male Jock
+Gigi Frog Female Snooty
+Gladys Ostrich Female Normal
+Gloria Duck Female Snooty
+Goldie Dog Female Normal
+Gonzo Koala Male Cranky
+Goose Chicken Male Jock
+Graham Hamster Male Smug
+Greta Mouse Female Snooty
+Grizzly Bear Male Cranky
+Groucho Bear Male Cranky
+Gruff Goat Male Cranky
+Gwen Penguin Female Snooty
+Hamlet Hamster Male Jock
+Hamphrey Hamster Male Cranky
+Hans Gorilla Male Smug
+Harry Hippo Male Cranky
+Hazel Squirrel Female Big Sister
+Henry Frog Male Smug
+Hippeux Hippo Male Smug
+Hopkins Rabbit Male Lazy
+Hopper Penguin Male Cranky
+Hornsby Rhino Male Lazy
+Huck Frog Male Smug
+Hugh Pig Male Lazy
+Iggly Penguin Male Jock
+Ike Bear Male Cranky
+Jacob Bird Male Lazy
+Jacques Bird Male Smug
+Jambette Frog Female Normal
+Jay Bird Male Jock
+Jeremiah Frog Male Lazy
+Jitters Bird Male Jock
+Joey Duck Male Lazy
+Judy Cub Female Snooty
+Julia Ostrich Female Snooty
+Julian Horse Male Smug
+June Cub Female Normal
+Kabuki Cat Male Cranky
+Katt Cat Female Big Sister
+Keaton Eagle Male Smug
+Ken Chicken Male Smug
+Ketchup Duck Female Peppy
+Kevin Pig Male Jock
+Kid Cat Cat Male Jock
+Kidd Goat Male Smug
+Kiki Cat Female Normal
+Kitt Kangaroo Female Normal
+Kitty Cat Female Snooty
+Klaus Bear Male Smug
+Knox Chicken Male Cranky
+Kody Cub Male Jock
+Kyle Wolf Male Smug
+Leonardo Tiger Male Jock
+Leopold Lion Male Smug
+Lily Frog Female Normal
+Limberg Mouse Male Cranky
+Lionel Lion Male Smug
+Lobo Wolf Male Cranky
+Lolly Cat Female Normal
+Lopez Deer Male Smug
+Louie Gorilla Male Jock
+Lucha Bird Male Smug
+Lucky Dog Male Lazy
+Lucy Pig Female Normal
+Lyman Koala Male Jock
+Mac Dog Male Jock
+Maddie Dog Female Peppy
+Maelle Duck Female Snooty
+Maggie Pig Female Normal
+Mallary Duck Female Snooty
+Maple Cub Female Normal
+Marcel Dog Male Lazy
+Marcie Kangaroo Female Normal
+Margie Elephant Female Normal
+Marina Octopus Female Normal
+Marshal Squirrel Male Smug
+Mathilda Kangaroo Female Snooty
+Megan Bear Female Normal
+Melba Koala Female Normal
+Merengue Rhino Female Normal
+Merry Cat Female Peppy
+Midge Bird Female Normal
+Mint Squirrel Female Snooty
+Mira Rabbit Female Big Sister
+Miranda Duck Female Snooty
+Mitzi Cat Female Normal
+Moe Cat Male Lazy
+Molly Duck Female Normal
+Monique Cat Female Snooty
+Monty Monkey Male Cranky
+Moose Mouse Male Jock
+Mott Lion Male Jock
+Muffy Sheep Female Big Sister
+Murphy Cub Male Cranky
+Nan Goat Female Normal
+Nana Monkey Female Normal
+Naomi Cow Female Snooty
+Nate Bear Male Lazy
+Nibbles Squirrel Female Peppy
+Norma Cow Female Normal
+O'Hare Rabbit Male Smug
+Octavian Octopus Male Cranky
+Olaf Anteater Male Smug
+Olive Cub Female Normal
+Olivia Cat Female Snooty
+Opal Elephant Female Snooty
+Ozzie Koala Male Lazy
+Pancetti Pig Female Snooty
+Pango Anteater Female Peppy
+Paolo Elephant Male Lazy
+Papi Horse Male Lazy
+Pashmina Goat Female Big Sister
+Pate Duck Female Peppy
+Patty Cow Female Peppy
+Paula Bear Female Big Sister
+Peaches Horse Female Normal
+Peanut Squirrel Female Peppy
+Pecan Squirrel Female Snooty
+Peck Bird Male Jock
+Peewee Gorilla Male Cranky
+Peggy Pig Female Peppy
+Pekoe Cub Female Normal
+Penelope Mouse Female Peppy
+Phil Ostrich Male Smug
+Phoebe Ostrich Female Big Sister
+Pierce Eagle Male Jock
+Pietro Sheep Male Smug
+Pinky Bear Female Peppy
+Piper Bird Female Peppy
+Pippy Rabbit Female Peppy
+Plucky Chicken Female Big Sister
+Pompom Duck Female Peppy
+Poncho Cub Male Jock
+Poppy Squirrel Female Normal
+Portia Dog Female Snooty
+Prince Frog Male Lazy
+Puck Penguin Male Lazy
+Puddles Frog Female Peppy
+Pudge Cub Male Lazy
+Punchy Cat Male Lazy
+Purrl Cat Female Snooty
+Queenie Ostrich Female Snooty
+Quillson Duck Male Smug
+Raddle Frog Male Lazy
+Rasher Pig Male Cranky
+Raymond Cat Male Smug
+Ren√©e Rhino Female Big Sister
+Reneigh Horse Female Big Sister
+Rex Lion Male Lazy
+Rhonda Rhino Female Normal
+Ribbot Frog Male Jock
+Ricky Squirrel Male Cranky
+Rizzo Mouse Male Cranky
+Roald Penguin Male Jock
+Robin Bird Female Snooty
+Rocco Hippo Male Cranky
+Rocket Gorilla Female Big Sister
+Rod Mouse Male Jock
+Rodeo Bull Male Lazy
+Rodney Hamster Male Smug
+Rolf Tiger Male Cranky
+Rooney Kangaroo Male Cranky
+Rory Lion Male Jock
+Roscoe Horse Male Cranky
+Rosie Cat Female Peppy
+Rowan Tiger Male Jock
+Ruby Rabbit Female Peppy
+Rudy Cat Male Jock
+Sally Squirrel Female Normal
+Samson Mouse Male Jock
+Sandy Ostrich Female Normal
+Savannah Horse Female Normal
+Scoot Duck Male Jock
+Shari Monkey Female Big Sister
+Sheldon Squirrel Male Jock
+Shep Dog Male Smug
+Sherb Goat Male Lazy
+Simon Monkey Male Lazy
+Skye Wolf Female Normal
+Sly Alligator Male Jock
+Snake Rabbit Male Jock
+Snooty Anteater Female Snooty
+Soleil Hamster Female Snooty
+Sparro Bird Male Jock
+Spike Rhino Male Cranky
+Spork Pig Male Lazy
+Sprinkle Penguin Female Peppy
+Sprocket Ostrich Male Jock
+Static Squirrel Male Cranky
+Stella Sheep Female Normal
+Sterling Eagle Male Jock
+Stinky Cat Male Jock
+Stitches Cub Male Lazy
+Stu Bull Male Lazy
+Sydney Koala Female Normal
+Sylvana Squirrel Female Normal
+Sylvia Kangaroo Female Big Sister
+T-Bone Bull Male Cranky
+Tabby Cat Female Peppy
+Tad Frog Male Jock
+Tammi Monkey Female Peppy
+Tammy Cub Female Big Sister
+Tangy Cat Female Peppy
+Tank Rhino Male Jock
+Tasha Squirrel Female Snooty
+Teddy Bear Male Jock
+Tex Penguin Male Smug
+Tia Elephant Female Normal
+Tiffany Rabbit Female Snooty
+Timbra Sheep Female Snooty
+Tipper Cow Female Snooty
+Tom Cat Male Cranky
+Truffles Pig Female Peppy
+Tucker Elephant Male Lazy
+Tutu Bear Female Peppy
+Twiggy Bird Female Peppy
+Tybalt Tiger Male Jock
+Ursala Bear Female Big Sister
+Velma Goat Female Snooty
+Vesta Sheep Female Normal
+Vic Bull Male Cranky
+Victoria Horse Female Peppy
+Violet Gorilla Female Snooty
+Vivian Wolf Female Snooty
+Vladimir Cub Male Cranky
+Wade Penguin Male Lazy
+Walker Dog Male Lazy
+Walt Kangaroo Male Cranky
+Wart Jr. Frog Male Cranky
+Weber Duck Male Lazy
+Wendy Sheep Female Peppy
+Whitney Wolf Female Snooty
+Willow Sheep Female Snooty
+Winnie Horse Female Peppy
+Wolfgang Wolf Male Cranky
+Yuka Koala Female Snooty
+Zell Deer Male Smug
+Zucker Octopus Male Lazy
+]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ awk -F"","[C ''{'}'T}'[1P}'t}'=}'$}'1}'1}'[1P}';}' }'$}'1}'=}'$}'4}';}' }'$}'4}'=}'t}';}' }'p}'r}'i}'n}'t}' }'$}'1}',}'$}'2}',}'$}'3}',}'$}'4}'[C[C villagers.csv
+Personality Species Gender Name
+Cranky Bird Male Admiral
+Peppy Squirrel Female Agent S
+Big Sister Pig Female Agnes
+Lazy Gorilla Male Al
+Lazy Alligator Male Alfonso
+Normal Koala Female Alice
+Snooty Alligator Female Alli
+Snooty Eagle Female Amelia
+Peppy Anteater Female Anabelle
+Lazy Bird Male Anchovy
+Cranky Bull Male Angus
+Peppy Mouse Female Anicotti
+Snooty Cat Female Ankha
+Normal Anteater Female Annalisa
+Snooty Horse Female Annalise
+Jock Anteater Male Antonio
+Cranky Eagle Male Apollo
+Peppy Hamster Female Apple
+Snooty Kangaroo Female Astrid
+Peppy Wolf Female Audie
+Normal Penguin Female Aurora
+Normal Chicken Female Ava
+Cranky Eagle Male Avery
+Jock Elephant Male Axel
+Snooty Sheep Female Baabara
+Jock Deer Male Bam
+Peppy Tiger Female Bangle
+Lazy Cub Male Barold
+Normal Dog Female Bea
+Smug Bear Male Beardo
+Lazy Deer Male Beau
+Snooty Chicken Female Becky
+Peppy Mouse Female Bella
+Lazy Chicken Male Benedict
+Lazy Dog Male Benjamin
+Normal Hippo Female Bertha
+Normal Mouse Female Bettina
+Peppy Tiger Female Bianca
+Jock Hippo Male Biff
+Lazy Elephant Male Big Top
+Jock Duck Male Bill
+Jock Goat Male Billy
+Lazy Dog Male Biskit
+Snooty Hippo Female Bitty
+Snooty Squirrel Female Blaire
+Snooty Ostrich Female Blanche
+Peppy Cub Female Bluebear
+Lazy Cat Male Bob
+Peppy Rabbit Female Bonbon
+Lazy Dog Male Bones
+Lazy Penguin Male Boomer
+Jock Gorilla Male Boone
+Jock Alligator Male Boots
+Cranky Pig Male Boris
+Cranky Gorilla Male Boyd
+Snooty Mouse Female Bree
+Lazy Mouse Male Broccolo
+Snooty Chicken Female Broffina
+Cranky Deer Male Bruce
+Peppy Hippo Female Bubbles
+Jock Horse Male Buck
+Jock Lion Male Bud
+Peppy Rabbit Female Bunnie
+Cranky Dog Male Butch
+Cranky Eagle Male Buzz
+Normal Squirrel Female Cally
+Cranky Frog Male Camofrog
+Big Sister Koala Female Canberra
+Peppy Mouse Female Candi
+Peppy Rabbit Female Carmen
+Normal Squirrel Female Caroline
+Normal Kangaroo Female Carrie
+Snooty Sheep Female Cashmere
+Normal Eagle Female Celia
+Cranky Gorilla Male Cesar
+Smug Mouse Male Chadder
+Big Sister Bear Female Charlise
+Peppy Cub Female Cheri
+Big Sister Dog Female Cherry
+Lazy Cub Male Chester
+Normal Goat Female Chevre
+Cranky Wolf Male Chief
+Smug Pig Male Chops
+Cranky Bear Male Chow
+Peppy Rabbit Female Chrissy
+Lazy Rabbit Male Claude
+Snooty Tiger Female Claudia
+Lazy Hamster Male Clay
+Snooty Horse Female Cleo
+Lazy Horse Male Clyde
+Jock Bull Male Coach
+Jock Pig Male Cobb
+Normal Rabbit Female Coco
+Lazy Rabbit Male Cole
+Smug Horse Male Colton
+Peppy Dog Female Cookie
+Jock Frog Male Cousteau
+Lazy Ostrich Male Cranston
+Cranky Frog Male Croque
+Lazy Penguin Male Cube
+Smug Sheep Male Curlos
+Jock Pig Male Curly
+Cranky Bear Male Curt
+Cranky Elephant Male Cyd
+Cranky Anteater Male Cyrano
+Normal Dog Female Daisy
+Normal Duck Female Deena
+Big Sister Deer Female Deirdre
+Cranky Alligator Male Del
+Lazy Monkey Male Deli
+Lazy Duck Male Derwin
+Snooty Deer Female Diana
+Big Sister Frog Female Diva
+Lazy Elephant Male Dizzy
+Cranky Wolf Male Dobie
+Lazy Rabbit Male Doc
+Jock Sheep Male Dom
+Normal Mouse Female Dora
+Peppy Rabbit Female Dotty
+Lazy Alligator Male Drago
+Lazy Duck Male Drake
+Jock Frog Male Drift
+Smug Horse Male Ed
+Lazy Chicken Male Egbert
+Snooty Monkey Female Elise
+Normal Elephant Female Ellie
+Lazy Horse Male Elmer
+Snooty Elephant Female Eloise
+Cranky Lion Male Elvis
+Lazy Deer Male Erik
+Smug Koala Male Eugene
+Normal Sheep Female Eunice
+Cranky Wolf Male Fang
+Normal Deer Female Fauna
+Peppy Cat Female Felicity
+Lazy Squirrel Male Filbert
+Jock Monkey Male Flip
+Big Sister Penguin Female Flo
+Peppy Ostrich Female Flora
+Normal Hamster Female Flurry
+Snooty Rabbit Female Francine
+Cranky Eagle Male Frank
+Peppy Duck Female Freckles
+Snooty Wolf Female Freya
+Snooty Penguin Female Friga
+Big Sister Sheep Female Frita
+Jock Frog Male Frobert
+Big Sister Deer Female Fuchsia
+Peppy Rabbit Female Gabi
+Normal Pig Female Gala
+Cranky Rabbit Male Gaston
+Normal Alligator Female Gayle
+Jock Rabbit Male Genji
+Snooty Frog Female Gigi
+Normal Ostrich Female Gladys
+Snooty Duck Female Gloria
+Normal Dog Female Goldie
+Cranky Koala Male Gonzo
+Jock Chicken Male Goose
+Smug Hamster Male Graham
+Snooty Mouse Female Greta
+Cranky Bear Male Grizzly
+Cranky Bear Male Groucho
+Cranky Goat Male Gruff
+Snooty Penguin Female Gwen
+Jock Hamster Male Hamlet
+Cranky Hamster Male Hamphrey
+Smug Gorilla Male Hans
+Cranky Hippo Male Harry
+Big Sister Squirrel Female Hazel
+Smug Frog Male Henry
+Smug Hippo Male Hippeux
+Lazy Rabbit Male Hopkins
+Cranky Penguin Male Hopper
+Lazy Rhino Male Hornsby
+Smug Frog Male Huck
+Lazy Pig Male Hugh
+Jock Penguin Male Iggly
+Cranky Bear Male Ike
+Lazy Bird Male Jacob
+Smug Bird Male Jacques
+Normal Frog Female Jambette
+Jock Bird Male Jay
+Lazy Frog Male Jeremiah
+Jock Bird Male Jitters
+Lazy Duck Male Joey
+Snooty Cub Female Judy
+Snooty Ostrich Female Julia
+Smug Horse Male Julian
+Normal Cub Female June
+Cranky Cat Male Kabuki
+Big Sister Cat Female Katt
+Smug Eagle Male Keaton
+Smug Chicken Male Ken
+Peppy Duck Female Ketchup
+Jock Pig Male Kevin
+Jock Cat Male Kid Cat
+Smug Goat Male Kidd
+Normal Cat Female Kiki
+Normal Kangaroo Female Kitt
+Snooty Cat Female Kitty
+Smug Bear Male Klaus
+Cranky Chicken Male Knox
+Jock Cub Male Kody
+Smug Wolf Male Kyle
+Jock Tiger Male Leonardo
+Smug Lion Male Leopold
+Normal Frog Female Lily
+Cranky Mouse Male Limberg
+Smug Lion Male Lionel
+Cranky Wolf Male Lobo
+Normal Cat Female Lolly
+Smug Deer Male Lopez
+Jock Gorilla Male Louie
+Smug Bird Male Lucha
+Lazy Dog Male Lucky
+Normal Pig Female Lucy
+Jock Koala Male Lyman
+Jock Dog Male Mac
+Peppy Dog Female Maddie
+Snooty Duck Female Maelle
+Normal Pig Female Maggie
+Snooty Duck Female Mallary
+Normal Cub Female Maple
+Lazy Dog Male Marcel
+Normal Kangaroo Female Marcie
+Normal Elephant Female Margie
+Normal Octopus Female Marina
+Smug Squirrel Male Marshal
+Snooty Kangaroo Female Mathilda
+Normal Bear Female Megan
+Normal Koala Female Melba
+Normal Rhino Female Merengue
+Peppy Cat Female Merry
+Normal Bird Female Midge
+Snooty Squirrel Female Mint
+Big Sister Rabbit Female Mira
+Snooty Duck Female Miranda
+Normal Cat Female Mitzi
+Lazy Cat Male Moe
+Normal Duck Female Molly
+Snooty Cat Female Monique
+Cranky Monkey Male Monty
+Jock Mouse Male Moose
+Jock Lion Male Mott
+Big Sister Sheep Female Muffy
+Cranky Cub Male Murphy
+Normal Goat Female Nan
+Normal Monkey Female Nana
+Snooty Cow Female Naomi
+Lazy Bear Male Nate
+Peppy Squirrel Female Nibbles
+Normal Cow Female Norma
+Smug Rabbit Male O'Hare
+Cranky Octopus Male Octavian
+Smug Anteater Male Olaf
+Normal Cub Female Olive
+Snooty Cat Female Olivia
+Snooty Elephant Female Opal
+Lazy Koala Male Ozzie
+Snooty Pig Female Pancetti
+Peppy Anteater Female Pango
+Lazy Elephant Male Paolo
+Lazy Horse Male Papi
+Big Sister Goat Female Pashmina
+Peppy Duck Female Pate
+Peppy Cow Female Patty
+Big Sister Bear Female Paula
+Normal Horse Female Peaches
+Peppy Squirrel Female Peanut
+Snooty Squirrel Female Pecan
+Jock Bird Male Peck
+Cranky Gorilla Male Peewee
+Peppy Pig Female Peggy
+Normal Cub Female Pekoe
+Peppy Mouse Female Penelope
+Smug Ostrich Male Phil
+Big Sister Ostrich Female Phoebe
+Jock Eagle Male Pierce
+Smug Sheep Male Pietro
+Peppy Bear Female Pinky
+Peppy Bird Female Piper
+Peppy Rabbit Female Pippy
+Big Sister Chicken Female Plucky
+Peppy Duck Female Pompom
+Jock Cub Male Poncho
+Normal Squirrel Female Poppy
+Snooty Dog Female Portia
+Lazy Frog Male Prince
+Lazy Penguin Male Puck
+Peppy Frog Female Puddles
+Lazy Cub Male Pudge
+Lazy Cat Male Punchy
+Snooty Cat Female Purrl
+Snooty Ostrich Female Queenie
+Smug Duck Male Quillson
+Lazy Frog Male Raddle
+Cranky Pig Male Rasher
+Smug Cat Male Raymond
+Big Sister Rhino Female Ren√©e
+Big Sister Horse Female Reneigh
+Lazy Lion Male Rex
+Normal Rhino Female Rhonda
+Jock Frog Male Ribbot
+Cranky Squirrel Male Ricky
+Cranky Mouse Male Rizzo
+Jock Penguin Male Roald
+Snooty Bird Female Robin
+Cranky Hippo Male Rocco
+Big Sister Gorilla Female Rocket
+Jock Mouse Male Rod
+Lazy Bull Male Rodeo
+Smug Hamster Male Rodney
+Cranky Tiger Male Rolf
+Cranky Kangaroo Male Rooney
+Jock Lion Male Rory
+Cranky Horse Male Roscoe
+Peppy Cat Female Rosie
+Jock Tiger Male Rowan
+Peppy Rabbit Female Ruby
+Jock Cat Male Rudy
+Normal Squirrel Female Sally
+Jock Mouse Male Samson
+Normal Ostrich Female Sandy
+Normal Horse Female Savannah
+Jock Duck Male Scoot
+Big Sister Monkey Female Shari
+Jock Squirrel Male Sheldon
+Smug Dog Male Shep
+Lazy Goat Male Sherb
+Lazy Monkey Male Simon
+Normal Wolf Female Skye
+Jock Alligator Male Sly
+Jock Rabbit Male Snake
+Snooty Anteater Female Snooty
+Snooty Hamster Female Soleil
+Jock Bird Male Sparro
+Cranky Rhino Male Spike
+Lazy Pig Male Spork
+Peppy Penguin Female Sprinkle
+Jock Ostrich Male Sprocket
+Cranky Squirrel Male Static
+Normal Sheep Female Stella
+Jock Eagle Male Sterling
+Jock Cat Male Stinky
+Lazy Cub Male Stitches
+Lazy Bull Male Stu
+Normal Koala Female Sydney
+Normal Squirrel Female Sylvana
+Big Sister Kangaroo Female Sylvia
+Cranky Bull Male T-Bone
+Peppy Cat Female Tabby
+Jock Frog Male Tad
+Peppy Monkey Female Tammi
+Big Sister Cub Female Tammy
+Peppy Cat Female Tangy
+Jock Rhino Male Tank
+Snooty Squirrel Female Tasha
+Jock Bear Male Teddy
+Smug Penguin Male Tex
+Normal Elephant Female Tia
+Snooty Rabbit Female Tiffany
+Snooty Sheep Female Timbra
+Snooty Cow Female Tipper
+Cranky Cat Male Tom
+Peppy Pig Female Truffles
+Lazy Elephant Male Tucker
+Peppy Bear Female Tutu
+Peppy Bird Female Twiggy
+Jock Tiger Male Tybalt
+Big Sister Bear Female Ursala
+Snooty Goat Female Velma
+Normal Sheep Female Vesta
+Cranky Bull Male Vic
+Peppy Horse Female Victoria
+Snooty Gorilla Female Violet
+Snooty Wolf Female Vivian
+Cranky Cub Male Vladimir
+Lazy Penguin Male Wade
+Lazy Dog Male Walker
+Cranky Kangaroo Male Walt
+Cranky Frog Male Wart Jr.
+Lazy Duck Male Weber
+Peppy Sheep Female Wendy
+Snooty Wolf Female Whitney
+Snooty Sheep Female Willow
+Peppy Horse Female Winnie
+Cranky Wolf Male Wolfgang
+Snooty Koala Female Yuka
+Smug Deer Male Zell
+Lazy Octopus Male Zucker
+]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ 
+]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ 

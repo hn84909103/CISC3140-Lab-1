@@ -1,0 +1,21 @@
+
+]0;syyang@sol28:~[?1034h[syyang@sol28 ~]$ cd CISC3140
+]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ touch lab5-3.sh
+]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ vi lab5-3.sh
+[?1049h[?1h=[2;1H▽[6n[2;1H  [1;1H[1;24r[?12;25h[?12l[?25h[27m[m[H[2J[?25l[24;1H"lab5-3.sh" 19L, 411C[>c[1;1H[36m#CISC3140 lab 5.3
+#generate a gif animation from jpeg images
+#by using shell script[m
+
+[33mread[m [35m-p[m [33m"Type Y to generate a gif animation: "[m input_g
+[33mif [m[35m(([m [35m$input_g[m == [33m"Y"[m || [35m$input_g[m == [33m"y"[m [35m))[m
+[33mthen[m[8;9Hconvert [35m-delay[m [33m50[m [35m-dispose[m None\[9;17H[35m-page[m 300x300 1.jpg \[10;17H[35m-page[m 300x300 2.jpg \[11;17H[35m-page[m 300x300 3.jpg \[12;17H[35m-page[m 300x300 4.jpg \[13;9H[35m-loop[m [33m3[m animation.gif[14;9H[33mecho "gif is created"[m[15;9Hdisplay animation.gif
+[33mfi
+
+echo "Done"
+exit[m [33m0[m
+[34m~                                                                               [21;1H~                                                                               [22;1H~                                                                               [23;1H~                                                                               [m[24;63H5,1[11CAll[5;1H[?12l[?25h[?25l[24;1H[K[24;1H:[?12l[?25hx[?25l[?12l[?25h[?25l[24;1H[K[24;1H[?1l>[?12l[?25h[?1049l]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ chmod +x lab5-3.sh
+]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ ./lab5-3.sh
+Type Y to generate a gif animation: y
+gif is created
+Done
+]0;syyang@sol28:~/CISC3140[syyang@sol28 CISC3140]$ 
