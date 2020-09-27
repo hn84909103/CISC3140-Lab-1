@@ -17,3 +17,31 @@ Lab 5-2
 4. save and exit the sh file
 5. change the file to be executable 	  chmod +x lab5-2.sh
 6. run the sh file	                    ./lab5-2.sh
+
+
+Lab 5-3
+
+1. create a shell script file    touch lab5-3.sh
+2. edit the sh file		           vi lab5-3.sh
+3. commands in the file:
+	
+	read -p "Type Y to generate a gif animation : " input_g
+	if (( $input_g == "Y" || $input_g == "y" ))
+	then
+        	convert -delay 50 -dispose None\
+               		-page 300x300 1.jpg \
+                	-page 300x300 2.jpg \
+                	-page 300x300 3.jpg \
+             	  	-page 300x300 4.jpg \
+       		  -loop 3 animation.gif
+      	  	echo "gif animation is created"
+       		display animation.gif
+	fi
+
+	echo "Done"
+	exit 0
+
+4. save and exit the sh file
+5. change the file to be executable 	chmod +x lab5-3.sh
+6. run the sh file	./lab5-3.sh
+
