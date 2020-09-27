@@ -1,6 +1,6 @@
 CISC3140 Lab5
 
-<strong>Lab 5-1</strong>
+Lab 5-1
 
 1. download the csv file by using command wget https://raw.githubusercontent.com/hn84909103/CISC3140-Lab-1/master/villagers.csv
 2. check how many lines are in the file by command wc -l villagers.csv
@@ -11,9 +11,9 @@ CISC3140 Lab5
 
 Lab 5-2
 
-1. create a shell script file    touch lab5-2.sh
-2.edit the sh file		vi lab5-2.sh
+1. create a shell script file           touch lab5-2.sh
+2. edit the sh file		                  vi lab5-2.sh
 3. commands in the shell script file prints out the column 1 to 5 of villagers.csv
 4. save and exit the sh file
-5. change the file to be executable 	chmod +x lab5-2.sh
-6. run the sh file	./lab5-2.sh
+5. change the file to be executable 	  chmod +x lab5-2.sh
+6. run the sh file	                    ./lab5-2.sh
