@@ -5,5 +5,5 @@ Lab 5-1
 1. download the csv file by using command wget https://raw.githubusercontent.com/hn84909103/CISC3140-Lab-1/master/villagers.csv
 2. check how many lines are in the file by command wc -l villagers.csv
 3. print out line 1 to 5 by command awk 'NR == 1, NR ==5 {print}' villagers.csv
-4. extract columns 1, 2, 3, 4 out of  awk -F"," '{print $1,$2, $3, $4}' villagers.csv
+4. extract columns 1, 2, 3, 4 out of 21 by command awk -F"," '{print $1,$2, $3, $4}' villagers.csv
 5. swap column 1 and 4 by command awk -F"," '{t=$1; $1 = $4; $4 = t; print $1,$2, $3, $4}' villagers.csv
