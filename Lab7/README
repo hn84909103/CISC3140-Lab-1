@@ -1,1 +1,17 @@
+#README CISC 3140 Lab7 
+
+Practice to use makefile on Linux server
+
 ##
+
+1. create a new directory
+2. in the directory, create a Makefile
+3. edit Makefile with:
+   say_hello:
+          echo  "Hello"
+4. type in `make` in the command line to execute the Makefile
+5. prints out "Hellow World" in the command line
+
+##
+  
+  
