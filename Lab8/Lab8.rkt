@@ -1,10 +1,10 @@
 (define myList '(a b c d e f e d c b a)) ;input list
 
-(define (isPalindome ls)
+(define (isPalindrome ls)
   (define reS (reverseL myList))
   ;call function reverseL and asign the result to reS
   
-  (equal? ls reS ) ;return #t if the input is palindome
+  (equal? ls reS ) ;return #t if the input is palindrome
 )
 
 ;fuction to reverse the list
@@ -17,4 +17,4 @@
   )
 )
 
-(isPalindome myList)
+(isPalindrome myList)
