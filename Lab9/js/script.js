@@ -30,7 +30,7 @@ function lose(user, computer){
   computerScore ++;
   userScore_span.innerHTML = userScore;
   computerScore_span.innerHTML = computerScore;
-  result_div.innerHTML = user + " againests " + computer +". You Lose!";
+  result_div.innerHTML = user + " againsts " + computer +". You Lose!";
 }
 
 function draw(user, computer){
